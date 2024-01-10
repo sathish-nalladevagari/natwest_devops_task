@@ -1,0 +1,32 @@
+
+
+1. In the AWS Management Console, I find the "Services" .
+
+2. Under "Storage," selected "S3" to go to the S3 service dashboard.
+
+3.In the S3 dashboard, click the "Create bucket" button.
+  Provide a unique and globally unique name for your bucket
+  Choose the AWS region for your bucket
+  Giving access for policies.
+  Review and clicked " Create bucket" i named it "natwestdevopstask"
+
+4. select the bucket in dashboard and go to properties tab.
+   and selected static web hosting and given a index.html file and save the changes.
+
+5. For making it public i edited the "bucket policy" as 
+
+   {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::natwestdevopstask/*"
+    }
+  ]
+}
+
+and i saved the changes and the bucket is live in the below url and i provieded screen shots.
+
+http://natwestdevopstask.s3-website.eu-north-1.amazonaws.com/
